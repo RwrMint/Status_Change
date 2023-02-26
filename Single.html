@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Status </title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <p>Click Change Your Status!</p>
+        <div id="main">...</div>
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        <script>
+            var Status = {  }
+            Status.data = function() {
+                        var result = { }
+                        result.current = 0
+                        result.list = ["Single", "Married", "Divorced"]
+                        return result
+                    }
+            Status.template = `<button @click="next()" class="btn"> {{list[current]}} </button>`
+            Status.methods = { }
+            Status.methods.next = function() {
+                    this.current++
+                    if (this.current >= this.list.length) {    //when end value back to first
+                        this.current = 0
+                    }
+            }
+            Vue.createApp(Status).mount("#main")
+        </script>
+
+    </body>
+</html>

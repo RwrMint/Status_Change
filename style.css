@@ -1,0 +1,52 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.0rem;
+    font-weight: 500;
+    background-color: #E9D5FF;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50px auto;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+  }
+
+.mybtn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: 1px solid gray;
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-family: 'Segoe UI';
+    font-size: 1.0rem;
+    font-weight: solid;
+}
+
+.btn {
+    background-color: powderblue;
+    color: darkslategrey;
+    font-size: larger;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 3px 3px gray;
+    padding: 5px 15px;
+    min-height: 410px;
+    min-width: 500px;
+}
+
+.btn:focus {
+    outline-color: transparent;
+    outline-style:solid;
+    box-shadow: 0 0 0 4px plum;
+}
